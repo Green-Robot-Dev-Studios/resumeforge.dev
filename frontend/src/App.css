@@ -1,0 +1,57 @@
+html {
+  font-family: sans-serif;
+  margin: 0;
+}
+body {
+  display: flex;
+  margin: 0;
+  overflow: hidden;
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+#toggles {
+  flex-basis: calc(100vw - 9in);
+  overflow-y: scroll;
+  padding: 1rem;
+  padding-bottom: 5rem;
+}
+#container {
+  flex-basis: 9in;
+  display: flex;
+  --scale-factor: 1;
+}
+
+iframe {
+  transform: scale(var(--scale-factor));
+  width: calc(100% / var(--scale-factor));
+  height: calc(100% / var(--scale-factor));
+  min-width: calc(100% / var(--scale-factor));
+  transform-origin: 0 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input:focus::selection {
+  background-color: #ACCEF7;
+}
+
+input::selection {
+  background-color: transparent;
+}
+
+.monaco-editor .view-overlays .current-line {
+  border: none !important;
+}
+
+.npm__react-simple-code-editor__textarea::selection {
+  background-color: transparent;
+}
+
+.npm__react-simple-code-editor__textarea:focus::selection {
+  background-color: #ACCEF7;
+}
